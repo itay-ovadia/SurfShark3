@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
     /*All FIND FUNCTIONS */
 
     private void initBackgroundMusic() {
-        backgroundMusic = MediaPlayer.create(MainActivity.this, R.raw.star_wars_imperial_march);
+        backgroundMusic = MediaPlayer.create(MainActivity.this, R.raw.surf_waves);
         backgroundMusic.setLooping(true);
         backgroundMusic.setVolume(0.4f, 0.4f);
     }
