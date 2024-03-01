@@ -9,7 +9,7 @@ public class Config {
     public static final String KEY_LEFT = "KEY_LEFT";
     public static final String KEY_RIGHT = "KEY_RIGHT";
     public static final String GAME_OVER = "GAME OVER";
-    public static final String LOST_LIFE = "You lost 1 life";
+    public static final String LOST_LIFE = "You lost 1 life, avoid the sharks!!";
 
     public static final String ADD_SCORE = "+10 points";
 

@@ -7,7 +7,7 @@ import static com.example.secondgame.config.Config.KEY_RIGHT;
 import androidx.appcompat.widget.AppCompatImageView;
 
 
-import com.example.secondgame.model.Item;
+import com.example.secondgame.model.Element;
 import com.example.secondgame.model.ListOfResults;
 import com.example.secondgame.model.Result;
 import com.example.secondgame.model.Type;
@@ -29,7 +29,7 @@ public class GameManager {
     private int placeOfPlane = 2;
     private final int rows;
     private final int columns;
-    private Item[][] matrix;
+    private Element[][] matrix;
     private int lastIteration = -1;
     private int wrong;
     private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
@@ -42,7 +42,7 @@ public class GameManager {
         this.life = life;
         this.rows = rows;
         this.columns = columns;
-        this.matrix = new Item[rows][columns];
+        this.matrix = new Element[rows][columns];
 
     }
 
@@ -53,7 +53,7 @@ public class GameManager {
         return (int) Math.floor(Math.random() * (max - min) + min);
     }
 
-    public Item[][] getMatrix() {
+    public Element[][] getMatrix() {
         return matrix;
     }
 
@@ -152,7 +152,7 @@ public class GameManager {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                matrix[i][j] = new Item()
+                matrix[i][j] = new Element()
                         .setImage(matrixView[i][j])
                         .setType(Type.INVISIBLE);
                 ;

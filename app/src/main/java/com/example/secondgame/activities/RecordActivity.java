@@ -32,11 +32,11 @@ public class RecordActivity extends AppCompatActivity {
 
     private ImageView background;
 
-    CallBack_List callBack_userInfo = DataManager::getTopTenResults;
+    CallBack_List callBack_userInfo = DataManager::getTopResults;
 
     CallBack_Map callBack_map = map -> {
         map.clear();
-        ListOfResults top10 = DataManager.getTopTenResults();
+        ListOfResults top10 = DataManager.getTopResults();
         if (top10 != null) {
             for (int i = 0; i < top10.size(); i++) {
                 Result result = top10.get(i);

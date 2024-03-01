@@ -30,11 +30,11 @@
 
         android:layout_centerInParent="true"
         android:layout_marginBottom="20dp"
-        android:backgroundTint="@color/black"
-        android:fontFamily="sans-serif-medium"
+        android:backgroundTint="@color/blue_200"
+        android:fontFamily="@font/surffont"
         android:text="Start Game"
-        android:textColor="@color/blue_200"
-        android:textSize="28sp">
+        android:textColor="@color/white"
+        android:textSize="40sp">
 
     </com.google.android.material.button.MaterialButton>
 
@@ -46,11 +46,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="100dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/blue_200"
         android:text="TOP 10"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@color/blue_200"
-        android:textSize="28sp"></Button>
+        android:fontFamily="@font/surffont"
+        android:textColor="@color/white"
+        android:textSize="40sp"></Button>
 
 
 

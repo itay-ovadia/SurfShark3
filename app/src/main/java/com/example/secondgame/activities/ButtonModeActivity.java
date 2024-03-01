@@ -17,10 +17,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.secondgame.R;
 
 public class ButtonModeActivity extends AppCompatActivity {
-    private Button fastMode;
-    private Button slowMode;
-    private final int FAST_MODE = 500;
-    private final int SLOW_MODE = 1000;
+    private Button Mode_Fast;
+    private Button Mode_Slow;
+    private final int FAST = 500;
+    private final int SLOW = 1000;
 
 
     private ImageView background;
@@ -37,15 +37,15 @@ public class ButtonModeActivity extends AppCompatActivity {
     }
 
     private void findViews() {
-        fastMode = findViewById(R.id.buttonMenu_BTN_FastMode);
-        slowMode = findViewById(R.id.buttonMenu_BTN_SlowMode);
+        Mode_Fast = findViewById(R.id.buttonMenu_BTN_FastMode);
+        Mode_Slow = findViewById(R.id.buttonMenu_BTN_SlowMode);
         background = findViewById(R.id.buttonMenu_IMG_background);
     }
 
     private void initViews() {
-        fastMode.setOnClickListener(view -> changeActivity(FAST_MODE));
+        Mode_Fast.setOnClickListener(view -> changeActivity(FAST));
 
-        slowMode.setOnClickListener(view -> changeActivity(SLOW_MODE));
+        Mode_Slow.setOnClickListener(view -> changeActivity(SLOW));
     }
 
     private void changeActivity(int delay) {
@@ -53,13 +53,13 @@ public class ButtonModeActivity extends AppCompatActivity {
         Intent intent;
 
         intent = new Intent(ButtonModeActivity.this, MainActivity.class);
-        int mode = getDataFromPrevIntent();
+        int mode = fromLastIntent();
         intent.putExtra(KEY_MODE, mode);
         intent.putExtra(KEY_DELAY, delay);
         startActivity(intent);
     }
 
-    private int getDataFromPrevIntent() {
+    private int fromLastIntent() {
         Intent prevIntent = getIntent();
         return prevIntent.getExtras().getInt(KEY_MODE);
     }

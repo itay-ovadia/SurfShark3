@@ -26,7 +26,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBmG-uOoUgG0pxhUhcSTsm9fqMWTfEdId4" />
+            android:value="AIzaSyBxhMAdWovc83MnpwU4olncdOmaYlmGz-U" />
 
         <activity
             android:name=".activities.StartMenuActivity"

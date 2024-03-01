@@ -26,7 +26,7 @@ import com.example.secondgame.GameManager;
 import com.example.secondgame.R;
 import com.example.secondgame.model.Type;
 import com.example.secondgame.callbacks.SensorDetector;
-import com.example.secondgame.model.Item;
+import com.example.secondgame.model.Element;
 import com.example.secondgame.utils.GPS;
 import com.example.secondgame.utils.MySignal;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -47,20 +47,15 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer backgroundMusic;
     private MediaPlayer crashSound;
 
+    private TextView main_LBL_score;
+    private int DELAY = 1000;
+    GameManager gameManager;
+
+    SensorDetector sensorDetector;
     private AppCompatImageView[][] main_MATRIX_sharks;
     private AppCompatImageView[] main_IMG_surfer;
     private ExtendedFloatingActionButton main_BTN_left;
     private ExtendedFloatingActionButton main_BTN_right;
-
-    private TextView main_LBL_score;
-
-
-    private int DELAY = 1000;
-
-    GameManager gameManager;
-
-    SensorDetector sensorDetector;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -216,18 +211,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     /*RENDERING FUNCTIONS */
-    private void renderMatrix(Item[][] items) {
+    private void renderMatrix(Element[][] elements) {
         for (int i = 0; i < ROW_COUNT; i++) {
             for (int j = 0; j < COLUMN_COUNT; j++) {
-                Type type = items[i][j].getType();
+                Type type = elements[i][j].getType();
                 if (type == Type.VISIBLE) {
-                    items[i][j].getImage().setVisibility(View.VISIBLE);
-                    items[i][j].getImage().setImageResource(R.drawable.shark);
+                    elements[i][j].getImage().setVisibility(View.VISIBLE);
+                    elements[i][j].getImage().setImageResource(R.drawable.shark);
                 } else if (type == Type.COIN) {
-                    items[i][j].getImage().setVisibility(View.VISIBLE);
-                    items[i][j].getImage().setImageResource(R.drawable.img_coin);
+                    elements[i][j].getImage().setVisibility(View.VISIBLE);
+                    elements[i][j].getImage().setImageResource(R.drawable.img_coin);
                 } else {
-                    items[i][j].getImage().setVisibility(View.INVISIBLE);
+                    elements[i][j].getImage().setVisibility(View.INVISIBLE);
                 }
 
             }

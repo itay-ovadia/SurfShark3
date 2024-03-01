@@ -11,7 +11,8 @@ import java.util.ArrayList;
 public class DataManager {
 
 
-    public static ListOfResults getTopTenResults() {
+    
+    public static ListOfResults getTopResults() {
         ListOfResults listOfResults = getResults();
         if (listOfResults != null) {
             ArrayList<Result> results = sortResults(listOfResults);
