@@ -10,6 +10,7 @@ public class Result {
     private double y;
 
 
+
     public Result() {
 
     }
